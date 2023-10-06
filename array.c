@@ -1,3 +1,5 @@
+
+
 #include<stdio.h>
 void main()
 {
@@ -14,3 +16,4 @@ void main()
 	  printf("%d",a[i]);
 	}
 }
+

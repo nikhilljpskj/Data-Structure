@@ -2,7 +2,7 @@ name: Auto Commit
 
 on:
   schedule:
-    - cron: "0 */5 * * *"
+    - cron: "0 */2 * * *"
 
 jobs:
   auto-commit:
@@ -11,6 +11,11 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
+
+    - name: Set Git Config
+      run: |
+        git config user.email "nikhiljp.skj@gmail.com"
+        git config user.name "nikhilljpskj"
 
     - name: Run Your Script
       run: |
